@@ -1,6 +1,6 @@
 # ✈️ Buchungsannahme mit Gewichtslimit
 
-*(noch nicht deployed)*
+**[→ Demo live ausprobieren](https://sebastianhanisch-uld-buchungsannahme-demo.streamlit.app/)**
 
 Eigenständiges Luftfracht-Stück, geschärft gegenüber [`revenue-management-demo`](https://github.com/sebastian-hanisch/revenue-management-demo)
 (dort: zwei Frachtklassen, **jede** Buchung verbraucht genau **eine** diskrete Kapazitätseinheit, geschlossene

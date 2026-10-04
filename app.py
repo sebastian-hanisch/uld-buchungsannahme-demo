@@ -161,9 +161,9 @@ keine Näherung nötig); die Preisschwelle ist dabei immer die gemessene Mitte d
 st.markdown("**1 · Rückstand über die Restzeit** (festes Gewichtslimit/Korrelation Ihrer Einstellung)")
 t_rows = R.time_rows(DATA, cap, corr)
 st.plotly_chart(V.gap_over_time_figure(t_rows), width="stretch", key="core_gap")
-st.caption("FCFS bleibt über die Restzeit ungefähr gleich schlecht; die feste Schwellenregel wird mit mehr "
-           "Buchungsgelegenheiten schwächer, weil eine starre Schwelle nicht auf die mit der Zeit wachsende "
-           "Restwert-Information reagiert.")
+st.caption("FCFS liegt bei jeder Restzeit weit zurück (mit mehr Buchungsgelegenheiten eher noch weiter); die feste "
+           "Schwellenregel holt das meiste zurück, wird aber in den meisten Zellen mit mehr Buchungsgelegenheiten "
+           "schwächer, weil eine starre Schwelle nicht auf die mit der Zeit wachsende Restwert-Information reagiert.")
 
 st.markdown("**2 · Weniger Auslastung, mehr Umsatz** – der Kern-Befund dieser Zelle")
 ug = R.utilization_gap_cell(DATA, t, cap, corr)
@@ -298,7 +298,7 @@ ein Kapazitätsgitter ersetzt sie.
 with st.expander("📐 Mathematische Formulierung"):
     st.markdown(
         r"""
-**Bellman-Gleichung.** $V(t, c) = \mathbb{E}\big[\max\big(V(t+1, c),\; \text{Preis} + V(t+1, c - \text{Gewicht})\big) \mid \text{Gewicht} \le c\big]$
+**Bellman-Gleichung.** $V(t, c) = \mathbb{E}\big[\max\big(V(t+1, c),\; \text{Preis} + V(t+1, c - \text{Gewicht})\big)\big]$ - der Erwartungswert läuft über alle Anfragen (Gewichts-/Preisstufen); eine Anfrage mit Gewicht $> c$ kann nicht angenommen werden und trägt $V(t+1, c)$ bei.
 
 **Bid-Price** zum Zeitpunkt $t$ bei Restkapazität $c$: $\beta(t, c) = V(t+1, c) - V(t+1, c - \text{Gewichtsstufe})$
 
@@ -314,6 +314,6 @@ st.markdown("---")
 
 st.caption(
     "Diese Demo ist Teil des Portfolios von [Sebastian Hanisch](https://sebastianhanisch.net) – "
-    "Operations Research und Machine Learning. Interesse an einer maßgeschneiderten Lösung für "
-    "Ihr Unternehmen? [Kontakt aufnehmen](https://sebastianhanisch.net/kontakt.html)"
+    "Operations Research und Machine Learning ([Über mich](https://sebastianhanisch.net/ueber-mich.html)). "
+    "Mehr zum Thema: [Luftfracht optimieren](https://sebastianhanisch.net/luftfracht-optimierung.html)."
 )

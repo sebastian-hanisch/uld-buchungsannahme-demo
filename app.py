@@ -68,8 +68,8 @@ einfach anzunehmen, solange Platz ist (**FCFS**) oder mit einer **festen Preissc
 gegenüber einer Regel, die den **Restwert der Kapazität** kennt (**DP-Regel**, Bid-Price-Kontrolle)? Die
 Demo zeigt live **eine Instanz** mit allen drei Regeln (immer alle drei gerechnet) und vorgerechnet die
 Messreihe über **150 Instanzen je Zelle**, die die Aussage trägt. Wie das Modell funktioniert, steht im
-Expander „Wie funktioniert diese Demo?" weiter unten, die formale Beschreibung im Expander
-„📐 Mathematische Formulierung".
+Expander „Wie funktioniert diese Demo?“ weiter unten, die formale Beschreibung im Expander
+„📐 Mathematische Formulierung“.
 """
 )
 

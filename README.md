@@ -100,7 +100,7 @@ behoben (siehe dortiges `ERGEBNIS.md`, mechanisch übernommen, nicht erneut aufg
 
 ## Tests
 
-74 Tests, siehe Ausgabe von `_venvs/test/Scripts/python.exe -m pytest tests -v` (Laufzeit rund 10 s):
+83 Tests, siehe Ausgabe von `_venvs/test/Scripts/python.exe -m pytest tests -v` (Laufzeit rund 10 s):
 
 - `tests/test_model.py` - die 12 Korrektheits-Checks aus `messreihe_uld_buchung/check.py` (Handrechnung,
   Kapazitätsgrenze über 450 Läufe, Schwellenregel-Einhaltung, Nullkapazität, DP-Wertfunktion monoton in

@@ -9,7 +9,7 @@ Gewichtslimit - ein Online-Rucksackproblem (Bid-Price-Kontrolle), für das die L
 funktioniert, weil es keine feste Einheitengröße gibt; eine dynamische Programmierung (DP) über ein
 Kapazitätsgitter ersetzt sie. Die Demo zeigt live **eine Instanz** mit drei Regeln (FCFS, feste
 Preisschwelle, DP-Regel - hier immer alle drei gerechnet) und vorgerechnet die Messreihe über
-**150 Instanzen je Zelle** (18 Zellen), die die Aussage trägt.
+**150 Instanzen je Zelle** (18 Zellen), die die Aussage belegt.
 
 ## Warum dieses Problem
 

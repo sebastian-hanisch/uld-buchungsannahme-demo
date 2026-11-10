@@ -1,6 +1,6 @@
 """Abnahmekriterien der fünf Presets (Detailplan Abschnitt 7) - jedes einzeln gegen die vorgerechnete
 Messreihe (data/uldb2_results.json) prüfbar, damit ein Preset nie eine Geschichte erzählt, die die Zahlen
-nicht tragen."""
+nicht belegen."""
 from __future__ import annotations
 
 import uldb2_constants as C

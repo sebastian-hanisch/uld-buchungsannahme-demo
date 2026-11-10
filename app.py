@@ -7,7 +7,7 @@ JEDE Buchung verbraucht genau EINE diskrete Kapazitätseinheit, geschlossene Lit
 verbraucht jede Buchungsanfrage ein ZUFÄLLIGES Gewicht aus einem gemeinsamen Gewichtslimit - ein Online-
 Rucksackproblem, für das die Littlewood-Formel nicht funktioniert; eine dynamische Programmierung (DP,
 Bid-Price-Kontrolle) ersetzt sie. Live: eine Instanz mit drei Regeln (FCFS, feste Preisschwelle, DP-Regel).
-Vorgerechnet: die Messreihe über 150 Instanzen je Zelle (data/uldb2_results.json), die die Aussage trägt.
+Vorgerechnet: die Messreihe über 150 Instanzen je Zelle (data/uldb2_results.json), die die Aussage belegt.
 
 Lauffähig mit: streamlit run app.py
 """
@@ -67,7 +67,7 @@ feste Einheitengröße**, die Littlewood-Formel funktioniert dafür nicht. Wie v
 einfach anzunehmen, solange Platz ist (**FCFS**) oder mit einer **festen Preisschwelle** je kg zu arbeiten -
 gegenüber einer Regel, die den **Restwert der Kapazität** kennt (**DP-Regel**, Bid-Price-Kontrolle)? Die
 Demo zeigt live **eine Instanz** mit allen drei Regeln (immer alle drei gerechnet) und vorgerechnet die
-Messreihe über **150 Instanzen je Zelle**, die die Aussage trägt. Wie das Modell funktioniert, steht im
+Messreihe über **150 Instanzen je Zelle**, die die Aussage belegt. Wie das Modell funktioniert, steht im
 Expander „Wie funktioniert diese Demo?“ weiter unten, die formale Beschreibung im Expander
 „📐 Mathematische Formulierung“.
 """
@@ -121,7 +121,7 @@ st.caption(f"Live-Instanz (eine Buchungsfolge): Seed {seed}, T = {t}, Gewichtsli
            f"Korrelation {corr:g}, Preisschwelle {fmt_num(threshold, 1)} EUR/kg. Alle drei Regeln laufen bei "
            "jeder Einstellung neu; die DP-Wertfunktion hängt nur von T/Gewichtslimit/Korrelation ab und wird "
            "nur bei deren Änderung neu berechnet (Millisekunden). Eine einzelne Instanz – die vorgerechnete "
-           "Messreihe unten trägt die Aussage.")
+           "Messreihe unten belegt die Aussage.")
 
 st.plotly_chart(V.timeline_figure(live["requests"], live["accepted"]), width="stretch", key="main_timeline")
 st.plotly_chart(V.capacity_figure(live["requests"], live["accepted"], cap), width="stretch", key="main_capacity")
